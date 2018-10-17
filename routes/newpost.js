@@ -17,7 +17,7 @@ router.post("/",(req,res,next)=>{
     newPost.permalink = req.body.permalink;
     newPost.postContent = req.body.postContent;
     newPost.author = req.body.author;
-
+    
     repo.addPost(newPost);
     }
     res.redirect("/");

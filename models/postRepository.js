@@ -12,9 +12,9 @@ let loadPosts = () =>{
             throw err;
         }
         else{
-        let newPostsArr = JSON.parse(data);
+        let newPostsArr = JSON.parse(data) ;
         if(newPostsArr.length > 0){
-            postList = newPostsArr;
+            postList = newPostsArr ;
         }
     }
     });
@@ -43,12 +43,16 @@ let repo = {
         return postList.find((post)=> {
             return post.permalink === permalink;
         });
-
     },
     addPost: (newPost) => {
         postList.push(newPost);
         savePosts();
-    }
+    },
+   /* delPost: (thisPost) =>{
+        postList.pop(thisPost);
+        savePosts();
+    }*/
 };
+
 
 module.exports = repo;
