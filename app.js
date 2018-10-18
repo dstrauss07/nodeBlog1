@@ -9,7 +9,7 @@ var usersRouter = require('./routes/users');
 var about = require('./routes/about');
 var post = require('./routes/post');
 var newpost = require('./routes/newpost');
-//var delpost = require('./routes/delete');
+var delpost = require('./routes/delete');
 var updatepost = require('./routes/edit');
 
 
