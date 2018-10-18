@@ -9,6 +9,8 @@ var usersRouter = require('./routes/users');
 var about = require('./routes/about');
 var post = require('./routes/post');
 var newpost = require('./routes/newpost');
+//var delpost = require('./routes/delete');
+var updatepost = require('./routes/edit');
 
 
 var app = express();
@@ -28,6 +30,8 @@ app.use('/about',about);
 app.use('/post',post);
 app.use('/newpost',newpost);
 app.use('/users', usersRouter);
+app.use('/edit', updatepost);
+//app.use('/delete', delpost);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

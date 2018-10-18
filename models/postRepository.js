@@ -12,9 +12,9 @@ let loadPosts = () =>{
             throw err;
         }
         else{
-        let newPostsArr = JSON.parse(data) ;
-        if(newPostsArr.length > 0){
-            postList = newPostsArr ;
+            let newPostsArr = JSON.parse(data) ;
+            if(newPostsArr.length > 0){
+                postList = newPostsArr ;
         }
     }
     });
@@ -27,7 +27,7 @@ let savePosts = () =>{
         }
         console.log("the file has been saved.");
     });
-}
+};
 
 loadPosts();
 
@@ -36,22 +36,36 @@ let repo = {
     postCount: () =>{
         return postList.length;
     },
+    
     getPosts: () =>{
         return postList;
     },
+    
     getPostByPermalink: (permalink) =>{
         return postList.find((post)=> {
             return post.permalink === permalink;
         });
     },
+    
+    getPostIndex: (permalink) => {
+        return postList.findIndex((post) => {
+            return post.permalink === permalink;
+        });
+    },
+
     addPost: (newPost) => {
         postList.push(newPost);
         savePosts();
     },
-   /* delPost: (thisPost) =>{
-        postList.pop(thisPost);
+
+    deletePost: (index) => {
+        postList.splice(index,1);
         savePosts();
-    }*/
+    },
+    updatePost:(index, update) =>{
+        postList[index] = update;
+        savePosts();
+    }
 };
 
 

@@ -9,7 +9,12 @@
         <% for(var i = 0; i< posts.length; i++){%>
             <h1><a href= "/post/<%=posts[i].permalink %>"> <%= posts[i].title %></a></h1>
             <div><%- posts[i].postContent %></div>
-            
+            <button>
+                <a href="/edit/<%=posts[i].permalink %>">Edit</a>
+            </button>
+            <button>
+                <a href="/delete/<%=posts[i].permalink %>">Delete</a>
+            </button>
         <%}%>
 
     </main>
