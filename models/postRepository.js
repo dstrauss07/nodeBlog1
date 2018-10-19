@@ -25,7 +25,7 @@ let savePosts = () =>{
             console.error("error writing the file. " + err.message);
             throw err;
         }
-        console.log("the file has been saved.");
+        console.log("the JSON file has been saved.");
     });
 };
 
@@ -60,11 +60,15 @@ let repo = {
 
     deletePost: (index) => {
         postList.splice(index,1);
+        console.log("the post has been deleted.");
         savePosts();
     },
+
+
     updatePost:(index, update) =>{
         postList[index] = update;
         savePosts();
+        console.log("the post has been edited.");
     }
 };
 

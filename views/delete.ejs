@@ -1,3 +1,14 @@
 <% include partials/head %>
-<p>Post Deleted</p>
+<main>
+        <h1><%= title %></h1>
+        <div>
+            <%- content %>
+        </div>
+    </article>
+<form action= "/delete" method="POST">
+    <input type="hidden" id="delID" name="delid" value="<%= id %>">
+    <button type="submit">Delete Post</button>
+</form>
+
+</main>
 <% include partials/foot %>

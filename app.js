@@ -3,14 +3,13 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var about = require('./routes/about');
 var post = require('./routes/post');
 var newpost = require('./routes/newpost');
-var delpost = require('./routes/delete');
 var updatepost = require('./routes/edit');
+var deletepost = require('./routes/delete');
 
 
 var app = express();
@@ -18,7 +17,6 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -31,7 +29,7 @@ app.use('/post',post);
 app.use('/newpost',newpost);
 app.use('/users', usersRouter);
 app.use('/edit', updatepost);
-//app.use('/delete', delpost);
+app.use('/delete', deletepost);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

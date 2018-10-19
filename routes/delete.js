@@ -12,7 +12,16 @@ router.get('/:permalink',(req,res,next)=>{
         content: post.postContent,
         id: repo.getPostIndex(req.params.permalink)
     });
-    let postID= getPostIndex(req.params.permalink);
-    repo.deletePost(postID);
-    
-    });
+});
+
+// POST deletes the post
+
+router.post("/", (req,res,next) =>{
+     let delPost = {};    
+       delPost.id = req.body.delid;
+        repo.deletePost(delPost.id);
+        res.redirect('/');
+
+});
+
+module.exports = router;
