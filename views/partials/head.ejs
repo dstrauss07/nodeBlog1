@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
         <%= title %>
     </title>
@@ -12,11 +14,205 @@
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/newpost">Add New Post</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/"><img src="images/DSLogo.jpg">
+                <span class="sr-only">(current)</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/newpost">Add New Post</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Recent Articles
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="collapse" data-target="#submenu" aria-haspopup="true"
+                            aria-expanded="false">
+                            Articles & Projects
+                            <span>&CircleDot;</span>
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Coding Projects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Comedy
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">GitHub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Email</a>
+                    </li>
+                </ul>
+
+            </div>
         </nav>
+        <div class="collapse fade" id="submenu" role="dialog " aria-labelledby="exampleModalCenterTitle " aria-hidden="true ">
+            <div class="navbar-expand-lg bg-light ">
+                <div class="row no-gutters ">
+                    <div class="col-1 "> </div>
+                    <div class="col-4 ">
+                        <h4 class="pl-4 submenuhead ">David Strauss's Coding Articles and Projects</h4>
+                        <div class="row ">
+                            <div class="col ">
+                                <ul class="list-unstyled ">
+                                    <li>
+                                        <a class="nav-link " href="# ">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link " href="# ">Accessibility</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link " href="# ">Advertise</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link " href="# ">Ad Choices</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link " href="# ">Content Team</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="col ">
+                                <ul class="list-unstyled ">
+                                    <li>
+                                        <a class="nav-link " href="# ">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link " href="# ">Accessibility</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link " href="# ">Advertise</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link " href="# ">Ad Choices</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link " href="# ">Content Team</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label for="select-country ">Select Your Region</label>
+                            <select class="form-control " id="select-country ">
+                                <option>UK</option>
+                                <option>USA</option>
+                                <option>Brazil</option>
+                                <option>South Africa</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-1 " style="border-left:1px solid #000;height:300px "></div>
+                    <div class="col-5 ">
+                        <div class="row ">
+                            <div class="col ">
+                                <h4 class="submenuhead ">heading 1</h4>
+                                <ul class="list-unstyled ">
+                                    <li>
+                                        <a class="nav-link " href="# ">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link " href="# ">Accessibility</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link " href="# ">Advertise</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link " href="# ">Ad Choices</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link " href="# ">Content Team</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="col ">
+                                <h4 class="submenuhead ">heading 2</h4>
+                                <ul class="list-unstyled ">
+                                    <li>
+                                        <a class="nav-link " href="# ">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link " href="# ">Accessibility</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link " href="# ">Advertise</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link " href="# ">Ad Choices</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link " href="# ">Content Team</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col ">
+                                <ul class="list-unstyled ">
+                                    <h4 class="submenuhead ">heading 3</h4>
+                                    <li>
+                                        <a class="nav-link" href="#">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link " href="# ">Accessibility</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link " href="# ">Advertise</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link " href="# ">Ad Choices</a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link " href="# ">Content Team</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1 ">
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
