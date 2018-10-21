@@ -10,6 +10,7 @@ router.get('/:permalink',(req,res,next)=>{
         permalink: post.permalink,
         author: post.author,
         content: post.postContent,
+        posts: repo.getPosts(),
         id: repo.getPostIndex(req.params.permalink)
     });
 });

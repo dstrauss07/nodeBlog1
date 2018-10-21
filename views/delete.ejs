@@ -1,13 +1,19 @@
 <% include partials/head %>
 <main>
-        <h1> <%= title %><br> <span class="text-danger"> !? Are You Sure You Want To Delete !? </span></h1>
-        <div>
-            <%- content %>
-        </div>
-<form action= "/delete" method="POST">
-    <input type="hidden" id="delID" name="delid" value="<%= id %>">
-    <button type="submit">Delete Post</button>
-</form>
+    <div class="row justify-content-center">
+        <article class="ml-3 mt-1 postarea col-md-8">
+            <h1 class="text-center">
+                <%= title %><br> <span class="text-light"> !? Are You Sure You Want To Delete !? </span></h1>
+            <div class="postcontentarea mb-3">
+                <%- content %>
+            </div>
+            <form action="/delete" method="POST">
+                <input type="hidden" id="delID" name="delid" value="<%= id %>">
+                <div class="text-center mb-2"> <button class="btn btn-danger" type="submit">Delete Post</button></div>
+              
+            </form>
+    </div>
+    </article>
 
 </main>
 <% include partials/foot %>

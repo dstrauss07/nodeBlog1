@@ -11,3 +11,33 @@ a {
   color: #00B7FF;
 }
 
+.indexlink{
+  color:black;
+  font-size:2rem;
+}
+
+.postcontentarea{
+  background-color:lightblue;
+  padding: 1%;
+}
+
+.postarea{
+  background-color:lightcoral;
+}
+
+button a {
+  color:white;
+}
+
+button a:hover {
+  color:yellow;
+  text-decoration: none;
+}
+
+.textareabg{
+  background-color:grey;
+}
+
+.inputareabg{
+  background-color:wheat;
+}

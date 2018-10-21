@@ -6,7 +6,8 @@ let express = require('express'),
         var post = repo.getPostByPermalink(req.params.permalink);
         res.render('post', {title: post.title, post: post,
             postCount: repo.postCount(),
-            posts: repo.getPosts() });})
+            posts: repo.getPosts() });
+        })
  
 
 

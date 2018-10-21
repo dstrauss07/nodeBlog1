@@ -1,17 +1,22 @@
 <% include partials/head %>
 <main>
-    <form action= "/edit" method="POST">
-        <div>
-            <input type = "text" class= "form-control" name="title" value="<%= title %>">
+    <form class="justify-text-center m-3 bg-light" action="/edit" method="POST">
+        <div class="row">
+            <div class="form-group  ml-5">
+                <label for="title">Title</label><br>
+                <input class="inputareabg" type="text" class="form-control" name="title" value="<%= title %>">
+            </div>
+            <div class="form-group ml-5">
+                <label for="permalink">Permalink</label><br>
+                <input class="inputareabg" type="text" class="form-control" name="permalink" value="<%= permalink %>">
+            </div>
+            <div class="form-group ml-5">
+                <label for="Author">author</label><br>
+                <input class="inputareabg" type="text" class="form-control" name="author" value="<%= author %>">
+            </div>
         </div>
         <div>
-            <input type = "text" class= "form-control" name="permalink" value="<%= permalink %>">
-        </div>
-        <div>
-            <input type = "text" class= "form-control" name="author" value="<%= author %>">
-        </div>
-        <div>
-            <label for= "postContent">Post Content:</label>
+            <label for="postContent">Post Content:</label><br>
             <textarea class="form-control" id="postContent" name="postContent"><%= content %> </textarea>
         </div>
         <div>
@@ -19,7 +24,6 @@
             <button type="submit">Update Post</button>
             <button type="reset"><a href="/">Cancel</a></button>
         </div>
-        
     </form>
 
 </main>

@@ -1,12 +1,14 @@
 <% include partials/head %>
 
 <main>
-    <article>
+    <div class="row justify-content-center">
+    <article class="ml-3 mt-1 postarea col-md-8">
         <h1><%= post.title %></h1>
-        <div>
+        <div class="postcontentarea mb-3">
             <%- post.postContent %>
         </div>
     </article>
+</div>
 </main>
 
 <% include partials/foot %>

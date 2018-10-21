@@ -4,6 +4,7 @@ const fs = require('fs'),
     fileName = path.join(filePath, "postData.json");
 
 let postList = [];
+let j= 0;
 
 let loadPosts = () =>{
     fs.readFile(fileName, "utf8", (err,data)=>{
@@ -39,16 +40,14 @@ let repo = {
     
     getPosts: () =>{
         return postList;
-    },
-
-    orderPosts:()=>{
-        for (var a = postCount - 1; a>=0; a--){
-            return postList[a];
-        };
-
-    },
-
-    
+    //     let a = postList.length - 1;
+    //     if(a>=0){
+    //     orderedPosts = postList[a];
+    //     return orderedPosts;
+    //     a--;}
+    // 
+},
+   
     getPostByPermalink: (permalink) =>{
         return postList.find((post)=> {
             return post.permalink === permalink;

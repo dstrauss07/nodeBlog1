@@ -10,12 +10,14 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+    <script>tinymce.init({ selector: 'textarea' });</script>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="/"><img src="images/DSLogo.jpg">
+            <a class="navbar-brand" href="/"><img src="/images/DSLogo.jpg" alt="ds">
                 <span class="sr-only">(current)</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -25,7 +27,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="/about">About</a></li> -->
                     <li class="nav-item"><a class="nav-link" href="/newpost">Add New Post</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -33,11 +35,12 @@
                             Recent Articles
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                     
-                            
-                            <% for(var a =posts.length-1; a >=0; a--) {%>
-                                        <a class="dropdown-item" href="/post/<%=posts[a].permalink %>">
-                            <%= posts[a].title %></a>
+
+
+                            <% for(var i = posts.length-1; i>=0; i--){%>
+                            <!-- To DO -  Make it so it only iterates to 5 most recent posts.-->
+                            <a class="dropdown-item" href="/post/<%=posts[i].permalink %>">
+                                <%= posts[i].title %></a>
                             <%}%>
 
                         </div>

@@ -10,8 +10,10 @@ router.get('/', function(req, res, next) {
   Author: "Daves", 
   dataSource: repo.dataSource, 
   postCount: repo.postCount(),
-  posts: repo.getPosts() });
+  posts: repo.getPosts(),
+  });
 });
+
 
 
 module.exports = router;
