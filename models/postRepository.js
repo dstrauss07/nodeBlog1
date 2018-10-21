@@ -40,6 +40,14 @@ let repo = {
     getPosts: () =>{
         return postList;
     },
+
+    orderPosts:()=>{
+        for (var a = postCount - 1; a>=0; a--){
+            return postList[a];
+        };
+
+    },
+
     
     getPostByPermalink: (permalink) =>{
         return postList.find((post)=> {
