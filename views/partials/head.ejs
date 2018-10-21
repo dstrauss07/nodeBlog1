@@ -33,10 +33,11 @@
                             Recent Articles
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                                <% for(var i = 0; i< posts.length; i++){%>
+                                    <a class="dropdown-item" href="/post/<%=posts[i].permalink %>">
+                                        <%= posts[i].title %></a>
+                                        <%}%>
+
                         </div>
                     </li>
                     <li class="nav-item">

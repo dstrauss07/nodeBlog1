@@ -6,7 +6,7 @@ let repo = require('../models/postRepository');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'My Cool Website', 
+  res.render('index', { title: "Dave Strauss' Coding Blog", 
   Author: "Daves", 
   dataSource: repo.dataSource, 
   postCount: repo.postCount(),

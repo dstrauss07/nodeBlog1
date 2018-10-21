@@ -1,16 +1,13 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14rem "Lucida Grande", Helvetica, Arial, sans-serif;
   
 }
 
-main{
-  background-color:gainsboro;
+#title-bar{
+  background-color:lightgreen;
 }
+
 a {
   color: #00B7FF;
 }
 
-.navbarbg{
-  background-color:rgb(174, 221, 135);
-}

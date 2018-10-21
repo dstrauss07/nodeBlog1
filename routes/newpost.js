@@ -5,7 +5,9 @@ let repo = require('../models/postRepository');
 
 // get send user to new post page with form to enter post
 router.get("/", (req,res,next) =>{
-    res.render('newpost', {title: 'new post'})
+    res.render('newpost', {title: 'new post',
+    postCount: repo.postCount(),
+    posts: repo.getPosts() });
 });
 
 // POST receives the data that user enters

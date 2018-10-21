@@ -1,22 +1,33 @@
-   <% include partials/head %>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <p>DataSource = <%= dataSource %></p>
-    <p>Number of Posts= <%= postCount %></p>
-
-    <main>
+<% include partials/head %>
+<div class="row justify-content-center">
+<div id="title-bar" class="w-100 text-center">
+<h1><%= title %></h1>
+</div>
+<!--<p>Welcome to <%= title %></p>
+<p>DataSource = <%= dataSource %> </p>
+<p>Number of Posts=<%= postCount %></p> -->
+</div>
+<div class="row">
+        <aside class="col-md-4 col-lg-3 p-3 text-center">
+                <img class="img-fluid mx-auto" src="images/dave.jpg">
+                </aside>
+    <main class="col-md-8 col-lg-9 bg-light p-5">
         <% for(var i = 0; i< posts.length; i++){%>
-            <h1><a href= "/post/<%=posts[i].permalink %>"> <%= posts[i].title %></a></h1>
-            <div><%- posts[i].postContent %></div>
-            <button>
-                <a href="/edit/<%=posts[i].permalink %>">Edit</a>
-            </button>
-            <button>
-             <a href="/delete/<%=posts[i].permalink %>">Delete!</a>
-            </button>
+        <h1><a href="/post/<%=posts[i].permalink %>">
+                <%= posts[i].title %></a></h1>
+        <div>
+            <%- posts[i].postContent %>
+        </div>
+        <button>
+            <a href="/edit/<%=posts[i].permalink %>">Edit</a>
+        </button>
+        <button>
+            <a href="/delete/<%=posts[i].permalink %>">Delete!</a>
+        </button>
         <%}%>
 
     </main>
+</div>
 
 
-    <% include partials/foot %>
+<% include partials/foot %>
